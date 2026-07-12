@@ -14,6 +14,7 @@ import ProtectedRoute from "../components/ProtectedRoute";
 function AppRoutes() {
   return (
     <BrowserRouter>
+
       <Routes>
 
         <Route path="/" element={<Landing />} />
@@ -58,12 +59,11 @@ function AppRoutes() {
           }
         />
 
-        <Route
-          path="*"
-          element={<NotFound />}
-        />
+        {/* Halaman 404 */}
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
+
     </BrowserRouter>
   );
 }
