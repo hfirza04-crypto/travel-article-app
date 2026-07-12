@@ -1,26 +1,29 @@
 function Footer() {
   return (
-    <footer className="bg-white shadow-inner mt-16">
+    <footer className="bg-white border-t mt-20">
+      <div className="max-w-7xl mx-auto py-8 px-8 text-center">
 
-      <div className="max-w-7xl mx-auto py-8 px-6 text-center">
-
-        <h2 className="text-2xl font-bold text-blue-600">
-          🌍 Travel Articles
+        <h2 className="text-xl font-bold text-blue-600">
+          🌍 Travel Article App
         </h2>
 
-        <p className="text-gray-600 mt-3">
-          Website artikel wisata yang dibuat menggunakan React, TypeScript,
-          Tailwind CSS, dan Strapi API.
+        <p className="mt-2 text-gray-600">
+          Explore beautiful destinations across Indonesia.
         </p>
 
-        <hr className="my-5" />
+        <p className="mt-5 text-sm text-gray-500">
+          © 2026 Travel Article App
+        </p>
 
-        <p className="text-gray-500">
-          © 2026 Habib Firza. All Rights Reserved.
+        <p className="text-sm text-gray-500">
+          Developed by <b>Habib Firza</b>
+        </p>
+
+        <p className="text-sm text-gray-500">
+          Politeknik Negeri Padang
         </p>
 
       </div>
-
     </footer>
   );
 }
