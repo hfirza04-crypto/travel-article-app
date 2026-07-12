@@ -1,32 +1,120 @@
-# React + TypeScript + Vite
+# 🌍 Travel Article App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplikasi web Travel Article yang dibuat menggunakan React + TypeScript + Vite dan terhubung dengan Strapi sebagai Backend API.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live Website**
+https://travel-article-app-nu.vercel.app
 
-## React Compiler
+## 📌 Fitur
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ✅ Landing Page
+- ✅ Register
+- ✅ Login
+- ✅ Logout
+- ✅ Protected Route
+- ✅ Menampilkan daftar artikel
+- ✅ Detail artikel
+- ✅ Tambah artikel
+- ✅ Edit artikel
+- ✅ Hapus artikel
+- ✅ Search artikel
+- ✅ Pagination
+- ✅ Toast Notification
+- ✅ SweetAlert2 Confirmation
+- ✅ Custom 404 Page
+- ✅ Responsive Design
 
-## Expanding the Oxlint configuration
+## 🛠️ Teknologi
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### Frontend
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- React
+- TypeScript
+- Vite
+- React Router DOM
+- Tailwind CSS
+- Axios
+- React Hook Form
+- Zod
+- Zustand
+- React Toastify
+- SweetAlert2
+
+### Backend
+
+- Strapi CMS
+- REST API
+
+## 📂 Struktur Folder
+
+```
+src
+│
+├── api
+├── components
+├── pages
+├── routes
+├── store
+├── validation
+└── assets
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## ⚙️ Instalasi
+
+Clone repository
+
+```bash
+git clone https://github.com/hfirza04-crypto/travel-article-app.git
+```
+
+Masuk ke folder project
+
+```bash
+cd travel-article-app
+```
+
+Install dependency
+
+```bash
+npm install
+```
+
+Jalankan project
+
+```bash
+npm run dev
+```
+
+Build project
+
+```bash
+npm run build
+```
+
+## 📷 Screenshot
+
+Tambahkan screenshot aplikasi di sini.
+
+- Landing Page
+- Login
+- Register
+- Home
+- Detail Artikel
+- Create Artikel
+- Edit Artikel
+- Delete Artikel
+- 404 Page
+
+## 👨‍💻 Developer
+
+Habib Firza
+
+Politeknik Negeri Padang
+
+D4 Teknik Telekomunikasi
+
+## 📄 License
+
+Project ini dibuat untuk keperluan pembelajaran dan tugas magang.
