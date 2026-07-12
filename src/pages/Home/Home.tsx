@@ -26,8 +26,7 @@ function Home() {
       setLoading(true);
 
       // Delay hanya untuk demo loading
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-
+      
       const data = await getArticles();
 
       setArticles(data.data);
