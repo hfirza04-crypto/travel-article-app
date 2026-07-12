@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
+import { toast } from "react-toastify";
+
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+import Loading from "../../components/Loading/Loading";
+
 import { getArticleById } from "../../api/article";
 
 function DetailArticle() {
@@ -22,33 +28,42 @@ function DetailArticle() {
       setArticle(response.data);
     } catch (error) {
       console.log(error);
-      alert("Gagal mengambil detail artikel");
+      toast.error("Gagal mengambil detail artikel!");
     } finally {
       setLoading(false);
     }
   };
 
   if (loading) {
-    return (
-      <div className="text-center text-3xl font-bold mt-20">
-        Loading...
-      </div>
-    );
+    return <Loading />;
   }
 
   return (
     <div className="min-h-screen bg-gray-100">
 
+      <Navbar />
+
       <div className="max-w-5xl mx-auto py-10 px-5">
 
-        <button
-          onClick={() => navigate("/home")}
-          className="bg-gray-700 text-white px-5 py-2 rounded-lg mb-8"
-        >
-          ← Kembali
-        </button>
+        <div className="flex justify-between items-center mb-6">
 
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <button
+            onClick={() => navigate("/home")}
+            className="bg-gray-700 hover:bg-gray-800 text-white px-5 py-2 rounded-lg transition"
+          >
+            ← Kembali
+          </button>
+
+          <Link
+            to={`/edit/${article.documentId}`}
+            className="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-lg transition"
+          >
+            ✏ Edit Artikel
+          </Link>
+
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
 
           <img
             src={
@@ -56,37 +71,44 @@ function DetailArticle() {
               "https://picsum.photos/1200/500"
             }
             alt={article.title}
-            className="w-full h-96 object-cover"
+            className="w-full h-[450px] object-cover"
           />
 
           <div className="p-8">
 
-            <h1 className="text-4xl font-bold mb-6">
+            <span className="inline-block bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold mb-4">
+              {article.category?.name || "Travel"}
+            </span>
+
+            <h1 className="text-4xl font-bold mb-5">
               {article.title}
             </h1>
 
-            <p className="text-gray-700 text-lg leading-9">
+            <div className="flex flex-wrap gap-6 text-gray-500 mb-8">
+
+              <p>
+                👤 <b>{article.user?.username || "Unknown"}</b>
+              </p>
+
+              <p>
+                📅{" "}
+                {new Date(article.createdAt).toLocaleDateString(
+                  "id-ID",
+                  {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  }
+                )}
+              </p>
+
+            </div>
+
+            <hr className="mb-8" />
+
+            <div className="text-gray-700 leading-9 text-lg whitespace-pre-line">
+
               {article.description}
-            </p>
-
-            <hr className="my-8" />
-
-            <div className="space-y-3">
-
-              <p>
-                <b>Penulis :</b>{" "}
-                {article.user?.username || "Unknown"}
-              </p>
-
-              <p>
-                <b>Kategori :</b>{" "}
-                {article.category?.name || "Travel"}
-              </p>
-
-              <p>
-                <b>Dibuat :</b>{" "}
-                {new Date(article.createdAt).toLocaleDateString()}
-              </p>
 
             </div>
 
@@ -95,6 +117,8 @@ function DetailArticle() {
         </div>
 
       </div>
+
+      <Footer />
 
     </div>
   );
