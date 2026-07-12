@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 
 function Landing() {
@@ -19,9 +20,12 @@ function Landing() {
               all over Indonesia.
             </p>
 
-            <button className="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg">
+            <Link
+              to="/login"
+              className="inline-block mt-8 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition duration-300"
+            >
               Explore Now
-            </button>
+            </Link>
           </div>
 
           {/* Bagian Kanan */}
