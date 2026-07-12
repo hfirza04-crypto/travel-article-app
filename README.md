@@ -1,67 +1,96 @@
 # 🌍 Travel Article App
 
-Aplikasi web Travel Article yang dibuat menggunakan React + TypeScript + Vite dan terhubung dengan Strapi sebagai Backend API.
+A modern web application for managing travel articles built using React, TypeScript, Tailwind CSS, and Strapi REST API.
 
-## 🚀 Demo
+---
 
-**Live Website**
-https://travel-article-app-nu.vercel.app
+## 🚀 Live Demo
 
-## 📌 Fitur
+🔗 https://travel-article-app-nu.vercel.app
 
-- ✅ Landing Page
-- ✅ Register
-- ✅ Login
-- ✅ Logout
-- ✅ Protected Route
-- ✅ Menampilkan daftar artikel
-- ✅ Detail artikel
-- ✅ Tambah artikel
-- ✅ Edit artikel
-- ✅ Hapus artikel
-- ✅ Search artikel
-- ✅ Pagination
-- ✅ Toast Notification
-- ✅ SweetAlert2 Confirmation
-- ✅ Custom 404 Page
-- ✅ Responsive Design
+---
 
-## 🛠️ Teknologi
+## 📸 Preview
+
+Landing Page
+
+Home Page
+
+Detail Article
+
+Create Article
+
+Edit Article
+
+Login
+
+Register
+
+> (Tambahkan screenshot aplikasi pada bagian ini setelah project selesai.)
+
+---
+
+## ✨ Features
+
+- 🔐 Authentication (Login & Register)
+- 🔒 Protected Route
+- 📰 Display Travel Articles
+- 🔍 Search Article
+- ➕ Create Article
+- ✏️ Edit Article
+- 🗑 Delete Article
+- 📄 Detail Article
+- 📑 Pagination
+- 🔔 Toast Notification
+- ❓ SweetAlert Confirmation
+- ⏳ Loading Animation
+- 📱 Responsive Design
+- ☁️ Deploy using Vercel
+
+---
+
+## 🛠 Built With
 
 ### Frontend
 
 - React
 - TypeScript
 - Vite
-- React Router DOM
 - Tailwind CSS
-- Axios
+- React Router DOM
 - React Hook Form
 - Zod
-- Zustand
 - React Toastify
 - SweetAlert2
+- Zustand
+- Axios
 
 ### Backend
 
 - Strapi CMS
 - REST API
 
-## 📂 Struktur Folder
+---
 
-```
+## 📂 Project Structure
+
+```text
 src
 │
 ├── api
+├── assets
 ├── components
 ├── pages
 ├── routes
 ├── store
 ├── validation
-└── assets
+├── App.tsx
+└── main.tsx
 ```
 
-## ⚙️ Instalasi
+---
+
+## ⚙️ Installation
 
 Clone repository
 
@@ -69,19 +98,19 @@ Clone repository
 git clone https://github.com/hfirza04-crypto/travel-article-app.git
 ```
 
-Masuk ke folder project
+Go to project
 
 ```bash
 cd travel-article-app
 ```
 
-Install dependency
+Install dependencies
 
 ```bash
 npm install
 ```
 
-Jalankan project
+Run development server
 
 ```bash
 npm run dev
@@ -93,28 +122,33 @@ Build project
 npm run build
 ```
 
-## 📷 Screenshot
+---
 
-Tambahkan screenshot aplikasi di sini.
+## 🌐 Deployment
 
-- Landing Page
-- Login
-- Register
-- Home
-- Detail Artikel
-- Create Artikel
-- Edit Artikel
-- Delete Artikel
-- 404 Page
+Frontend
 
-## 👨‍💻 Developer
+- Vercel
 
-Habib Firza
+Backend
+
+- Strapi
+
+---
+
+## 👨‍💻 Author
+
+**Habib Firza**
+
+D4 Telecommunication Engineering
 
 Politeknik Negeri Padang
 
-D4 Teknik Telekomunikasi
+GitHub:
+https://github.com/hfirza04-crypto
 
-## 📄 License
+---
 
-Project ini dibuat untuk keperluan pembelajaran dan tugas magang.
+## ⭐ Project Status
+
+✅ Completed
