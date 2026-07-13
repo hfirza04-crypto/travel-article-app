@@ -10,18 +10,32 @@ import EditArticle from "../pages/EditArticle/EditArticle";
 import NotFound from "../pages/NotFound/NotFound";
 
 import ProtectedRoute from "../components/ProtectedRoute";
+import GuestRoute from "../components/GuestRoute";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
-
       <Routes>
 
         <Route path="/" element={<Landing />} />
 
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={
+            <GuestRoute>
+              <Login />
+            </GuestRoute>
+          }
+        />
 
-        <Route path="/register" element={<Register />} />
+        <Route
+          path="/register"
+          element={
+            <GuestRoute>
+              <Register />
+            </GuestRoute>
+          }
+        />
 
         <Route
           path="/home"
@@ -59,11 +73,9 @@ function AppRoutes() {
           }
         />
 
-        {/* Halaman 404 */}
         <Route path="*" element={<NotFound />} />
 
       </Routes>
-
     </BrowserRouter>
   );
 }
