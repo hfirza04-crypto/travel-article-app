@@ -57,7 +57,7 @@ function Navbar() {
           <span>Travel Articles</span>
         </Link>
 
-        {/* Desktop */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
 
           <Link
@@ -69,6 +69,17 @@ function Navbar() {
             }
           >
             Home
+          </Link>
+
+          <Link
+            to="/dashboard"
+            className={
+              location.pathname === "/dashboard"
+                ? activeClass
+                : normalClass
+            }
+          >
+            Dashboard
           </Link>
 
           <Link
@@ -85,15 +96,10 @@ function Navbar() {
           <div className="flex items-center gap-3 bg-gray-100 px-4 py-2 rounded-full">
 
             <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex justify-center items-center font-bold">
-
-              {user?.username
-                ?.charAt(0)
-                .toUpperCase()}
-
+              {user?.username?.charAt(0).toUpperCase()}
             </div>
 
             <div>
-
               <p className="text-xs text-gray-500">
                 Login sebagai
               </p>
@@ -101,7 +107,6 @@ function Navbar() {
               <p className="font-semibold">
                 {user?.username}
               </p>
-
             </div>
 
           </div>
@@ -116,7 +121,6 @@ function Navbar() {
         </div>
 
         {/* Mobile Button */}
-
         <button
           className="md:hidden text-3xl"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -127,7 +131,6 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-
       {menuOpen && (
 
         <div className="md:hidden border-t bg-white shadow-lg">
@@ -147,6 +150,18 @@ function Navbar() {
             </Link>
 
             <Link
+              to="/dashboard"
+              onClick={() => setMenuOpen(false)}
+              className={
+                location.pathname === "/dashboard"
+                  ? activeClass
+                  : normalClass
+              }
+            >
+              📊 Dashboard
+            </Link>
+
+            <Link
               to="/create"
               onClick={() => setMenuOpen(false)}
               className={
@@ -161,11 +176,7 @@ function Navbar() {
             <div className="flex items-center gap-3 bg-gray-100 rounded-xl p-3">
 
               <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex justify-center items-center font-bold">
-
-                {user?.username
-                  ?.charAt(0)
-                  .toUpperCase()}
-
+                {user?.username?.charAt(0).toUpperCase()}
               </div>
 
               <div>

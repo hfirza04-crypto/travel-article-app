@@ -7,6 +7,7 @@ import Home from "../pages/Home/Home";
 import DetailArticle from "../pages/DetailArticle/DetailArticle";
 import CreateArticle from "../pages/CreateArticle/CreateArticle";
 import EditArticle from "../pages/EditArticle/EditArticle";
+import Dashboard from "../pages/Dashboard/Dashboard";
 import NotFound from "../pages/NotFound/NotFound";
 
 import ProtectedRoute from "../components/ProtectedRoute";
@@ -42,6 +43,15 @@ function AppRoutes() {
           element={
             <ProtectedRoute>
               <Home />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
             </ProtectedRoute>
           }
         />
