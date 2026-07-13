@@ -18,8 +18,7 @@ function Register() {
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
-  const [showPassword, setShowPassword] =
-    useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const {
     register,
@@ -29,27 +28,44 @@ function Register() {
     resolver: zodResolver(registerSchema),
   });
 
-  const onSubmit = async (
-    data: RegisterSchema
-  ) => {
+  const onSubmit = async (data: RegisterSchema) => {
     try {
       setLoading(true);
 
-      await registerUser(
+      const response = await registerUser(
         data.username,
         data.email,
         data.password
       );
+
+      console.log("REGISTER BERHASIL");
+      console.log(response);
 
       toast.success("Registrasi berhasil!");
 
       setTimeout(() => {
         navigate("/login");
       }, 1000);
-    } catch (error) {
+
+    } catch (error: any) {
+
+      console.log("===== REGISTER ERROR =====");
       console.log(error);
 
-      toast.error("Registrasi gagal!");
+      console.log("===== RESPONSE =====");
+      console.log(error.response);
+
+      console.log("===== DATA =====");
+      console.log(error.response?.data);
+
+      console.log("===== MESSAGE =====");
+      console.log(error.response?.data?.error?.message);
+
+      toast.error(
+        error.response?.data?.error?.message ||
+        "Registrasi gagal!"
+      );
+
     } finally {
       setLoading(false);
     }
@@ -69,8 +85,7 @@ function Register() {
           </h1>
 
           <p className="text-center text-gray-500 mb-8">
-            Daftarkan akun baru untuk mulai
-            menggunakan aplikasi.
+            Daftarkan akun baru untuk mulai menggunakan aplikasi.
           </p>
 
           <form
@@ -87,7 +102,7 @@ function Register() {
               <input
                 type="text"
                 placeholder="Masukkan username"
-                className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full border rounded-lg p-3"
                 {...register("username")}
               />
 
@@ -106,7 +121,7 @@ function Register() {
               <input
                 type="email"
                 placeholder="Masukkan email"
-                className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full border rounded-lg p-3"
                 {...register("email")}
               />
 
@@ -123,19 +138,15 @@ function Register() {
               </label>
 
               <input
-                type={
-                  showPassword ? "text" : "password"
-                }
+                type={showPassword ? "text" : "password"}
                 placeholder="Masukkan password"
-                className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full border rounded-lg p-3"
                 {...register("password")}
               />
 
               <button
                 type="button"
-                onClick={() =>
-                  setShowPassword(!showPassword)
-                }
+                onClick={() => setShowPassword(!showPassword)}
                 className="text-sm text-green-600 mt-2 hover:underline"
               >
                 {showPassword
@@ -152,15 +163,13 @@ function Register() {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full py-3 rounded-lg text-white font-semibold transition ${
+              className={`w-full py-3 rounded-lg text-white font-semibold ${
                 loading
                   ? "bg-green-300 cursor-not-allowed"
                   : "bg-green-600 hover:bg-green-700"
               }`}
             >
-              {loading
-                ? "Mendaftar..."
-                : "Register"}
+              {loading ? "Mendaftar..." : "Register"}
             </button>
 
           </form>
@@ -171,7 +180,7 @@ function Register() {
 
             <Link
               to="/login"
-              className="text-green-600 font-semibold ml-2 hover:underline"
+              className="text-green-600 font-semibold ml-2"
             >
               Login
             </Link>
