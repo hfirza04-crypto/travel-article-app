@@ -25,6 +25,8 @@ function Home() {
     try {
       setLoading(true);
 
+      // Delay hanya untuk demo loading
+      
       const data = await getArticles();
 
       setArticles(data.data);
@@ -74,9 +76,8 @@ function Home() {
     indexOfLast
   );
 
-  const totalPages = Math.max(
-    1,
-    Math.ceil(filteredArticles.length / articlesPerPage)
+  const totalPages = Math.ceil(
+    filteredArticles.length / articlesPerPage
   );
 
   return (
@@ -189,37 +190,33 @@ function Home() {
 
                 </div>
 
-                {currentArticles.length > 0 && (
+                <div className="flex justify-center items-center gap-5 mt-10">
 
-                  <div className="flex justify-center items-center gap-5 mt-10">
+                  <button
+                    disabled={currentPage === 1}
+                    onClick={() =>
+                      setCurrentPage(currentPage - 1)
+                    }
+                    className="bg-gray-300 px-5 py-2 rounded-lg disabled:opacity-50"
+                  >
+                    Previous
+                  </button>
 
-                    <button
-                      disabled={currentPage === 1}
-                      onClick={() =>
-                        setCurrentPage(currentPage - 1)
-                      }
-                      className="bg-gray-300 px-5 py-2 rounded-lg disabled:opacity-50"
-                    >
-                      Previous
-                    </button>
+                  <span className="text-xl font-bold">
+                    {currentPage} / {totalPages}
+                  </span>
 
-                    <span className="text-xl font-bold">
-                      {currentPage} / {totalPages}
-                    </span>
+                  <button
+                    disabled={currentPage === totalPages}
+                    onClick={() =>
+                      setCurrentPage(currentPage + 1)
+                    }
+                    className="bg-blue-600 text-white px-5 py-2 rounded-lg disabled:opacity-50"
+                  >
+                    Next
+                  </button>
 
-                    <button
-                      disabled={currentPage === totalPages}
-                      onClick={() =>
-                        setCurrentPage(currentPage + 1)
-                      }
-                      className="bg-blue-600 text-white px-5 py-2 rounded-lg disabled:opacity-50"
-                    >
-                      Next
-                    </button>
-
-                  </div>
-
-                )}
+                </div>
 
               </>
             )}

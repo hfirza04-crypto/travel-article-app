@@ -1,57 +1,115 @@
 # 🌍 Travel Article App
 
-A modern web application for managing travel articles built using React, TypeScript, Tailwind CSS, and Strapi REST API.
+A modern web application for managing travel articles built using **React**, **TypeScript**, **Tailwind CSS**, and **Strapi REST API**. The application allows users to register, log in, and manage travel articles through a complete CRUD system with a clean, responsive, and user-friendly interface.
 
 ---
 
-## 🚀 Live Demo
+# 🚀 Live Demo
 
-🔗 https://travel-article-app-nu.vercel.app
-
----
-
-## 📸 Preview
-
-Landing Page
-
-Home Page
-
-Detail Article
-
-Create Article
-
-Edit Article
-
-Login
-
-Register
-
-> (Tambahkan screenshot aplikasi pada bagian ini setelah project selesai.)
+🌐 https://travel-article-app-nu.vercel.app
 
 ---
 
-## ✨ Features
+# 📸 Preview
 
-- 🔐 Authentication (Login & Register)
+## Landing Page
+
+> *(Add screenshot here)*
+
+---
+
+## Login Page
+
+> *(Add screenshot here)*
+
+---
+
+## Register Page
+
+> *(Add screenshot here)*
+
+---
+
+## Dashboard
+
+> *(Add screenshot here)*
+
+---
+
+## Home Page
+
+> *(Add screenshot here)*
+
+---
+
+## Detail Article
+
+> *(Add screenshot here)*
+
+---
+
+## Create Article
+
+> *(Add screenshot here)*
+
+---
+
+## Edit Article
+
+> *(Add screenshot here)*
+
+---
+
+# ✨ Features
+
+### Authentication
+
+- 🔐 Register Account
+- 🔑 Login
+- 🚪 Logout
+
+### Security
+
 - 🔒 Protected Route
-- 📰 Display Travel Articles
-- 🔍 Search Article
+- 🚫 Guest Route
+
+### Dashboard
+
+- 📊 Dashboard Page
+- 👤 Display User Information
+- 📰 Display Total Articles
+- ⚡ Quick Menu Navigation
+
+### Article Management
+
+- 📰 Display All Articles
+- 📄 Detail Article
 - ➕ Create Article
 - ✏️ Edit Article
 - 🗑 Delete Article
-- 📄 Detail Article
+
+### Searching & Navigation
+
+- 🔍 Search Article
 - 📑 Pagination
+
+### User Experience
+
 - 🔔 Toast Notification
 - ❓ SweetAlert Confirmation
 - ⏳ Loading Animation
 - 📱 Responsive Design
-- ☁️ Deploy using Vercel
+- 🎨 Modern UI using Tailwind CSS
+
+### Deployment
+
+- ☁️ Deploy with Vercel
 
 ---
 
-## 🛠 Built With
+# 🛠️ Tech Stack
 
-### Frontend
+## Frontend
 
 - React
 - TypeScript
@@ -60,95 +118,53 @@ Register
 - React Router DOM
 - React Hook Form
 - Zod
-- React Toastify
-- SweetAlert2
 - Zustand
 - Axios
+- React Toastify
+- SweetAlert2
 
-### Backend
+## Backend
 
 - Strapi CMS
 - REST API
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```text
 src
 │
 ├── api
+│   ├── article.ts
+│   ├── auth.ts
+│   └── axios.ts
+│
 ├── assets
+│
 ├── components
+│   ├── Footer
+│   ├── Loading
+│   ├── Navbar
+│   ├── ProtectedRoute
+│   └── GuestRoute
+│
 ├── pages
+│   ├── Landing
+│   ├── Login
+│   ├── Register
+│   ├── Dashboard
+│   ├── Home
+│   ├── DetailArticle
+│   ├── CreateArticle
+│   ├── EditArticle
+│   └── NotFound
+│
 ├── routes
+│
 ├── store
+│
 ├── validation
+│
 ├── App.tsx
 └── main.tsx
-```
-
----
-
-## ⚙️ Installation
-
-Clone repository
-
-```bash
-git clone https://github.com/hfirza04-crypto/travel-article-app.git
-```
-
-Go to project
-
-```bash
-cd travel-article-app
-```
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Run development server
-
-```bash
-npm run dev
-```
-
-Build project
-
-```bash
-npm run build
-```
-
----
-
-## 🌐 Deployment
-
-Frontend
-
-- Vercel
-
-Backend
-
-- Strapi
-
----
-
-## 👨‍💻 Author
-
-**Habib Firza**
-
-D4 Telecommunication Engineering
-
-Politeknik Negeri Padang
-
-GitHub:
-https://github.com/hfirza04-crypto
-
----
-
-## ⭐ Project Status
-
-✅ Completed
