@@ -16,21 +16,6 @@ A modern web application for managing travel articles built using React, TypeScr
 
 ---
 
-# 📸 Preview
-
-- Landing Page
-- Login
-- Register
-- Dashboard
-- Home
-- Detail Article
-- Create Article
-- Edit Article
-
-> *(Tambahkan screenshot aplikasi jika diperlukan.)*
-
----
-
 # ✨ Features
 
 - 🔐 User Authentication (Login & Register)
@@ -40,7 +25,7 @@ A modern web application for managing travel articles built using React, TypeScr
 - 📰 Display Travel Articles
 - 🔍 Search Article
 - ➕ Create Article
-- ✏ Edit Article
+- ✏️ Edit Article
 - 🗑 Delete Article
 - 📖 Detail Article
 - 📄 Pagination
@@ -117,7 +102,7 @@ src
 
 ---
 
-# ⚙ Installation
+# ⚙️ Installation
 
 Clone repository
 
@@ -159,12 +144,10 @@ npm run preview
 
 # 🌐 Deployment
 
-Frontend
-
+**Frontend**
 - Vercel
 
-Backend
-
+**Backend**
 - Strapi CMS
 
 ---
@@ -177,16 +160,13 @@ D4 Telecommunication Engineering
 
 Politeknik Negeri Padang
 
-GitHub Profile
-
+**GitHub Profile**  
 https://github.com/hfirza04-crypto
 
-Repository
-
+**Repository**  
 https://github.com/hfirza04-crypto/travel-article-app
 
-Live Demo
-
+**Live Demo**  
 https://travel-article-app-nu.vercel.app
 
 ---
