@@ -1,6 +1,6 @@
 # 🌍 Travel Article App
 
-A modern web application for managing travel articles built using **React**, **TypeScript**, **Tailwind CSS**, and **Strapi REST API**. The application allows users to register, log in, and manage travel articles through a complete CRUD system with a clean, responsive, and user-friendly interface.
+A modern web application for managing travel articles built using React, TypeScript, Tailwind CSS, and Strapi REST API.
 
 ---
 
@@ -10,108 +10,53 @@ A modern web application for managing travel articles built using **React**, **T
 
 ---
 
+# 📂 GitHub Repository
+
+💻 https://github.com/hfirza04-crypto/travel-article-app
+
+---
+
 # 📸 Preview
 
-## Landing Page
+- Landing Page
+- Login
+- Register
+- Dashboard
+- Home
+- Detail Article
+- Create Article
+- Edit Article
 
-> *(Add screenshot here)*
-
----
-
-## Login Page
-
-> *(Add screenshot here)*
-
----
-
-## Register Page
-
-> *(Add screenshot here)*
-
----
-
-## Dashboard
-
-> *(Add screenshot here)*
-
----
-
-## Home Page
-
-> *(Add screenshot here)*
-
----
-
-## Detail Article
-
-> *(Add screenshot here)*
-
----
-
-## Create Article
-
-> *(Add screenshot here)*
-
----
-
-## Edit Article
-
-> *(Add screenshot here)*
+> *(Tambahkan screenshot aplikasi jika diperlukan.)*
 
 ---
 
 # ✨ Features
 
-### Authentication
-
-- 🔐 Register Account
-- 🔑 Login
-- 🚪 Logout
-
-### Security
-
-- 🔒 Protected Route
+- 🔐 User Authentication (Login & Register)
+- 🛡 Protected Route
 - 🚫 Guest Route
-
-### Dashboard
-
-- 📊 Dashboard Page
-- 👤 Display User Information
-- 📰 Display Total Articles
-- ⚡ Quick Menu Navigation
-
-### Article Management
-
-- 📰 Display All Articles
-- 📄 Detail Article
-- ➕ Create Article
-- ✏️ Edit Article
-- 🗑 Delete Article
-
-### Searching & Navigation
-
+- 📊 Dashboard
+- 📰 Display Travel Articles
 - 🔍 Search Article
-- 📑 Pagination
-
-### User Experience
-
+- ➕ Create Article
+- ✏ Edit Article
+- 🗑 Delete Article
+- 📖 Detail Article
+- 📄 Pagination
 - 🔔 Toast Notification
-- ❓ SweetAlert Confirmation
+- ❓ SweetAlert2 Confirmation
 - ⏳ Loading Animation
 - 📱 Responsive Design
-- 🎨 Modern UI using Tailwind CSS
-
-### Deployment
-
-- ☁️ Deploy with Vercel
+- ☁️ Deployment with Vercel
 
 ---
 
-# 🛠️ Tech Stack
+# 🛠 Built With
 
 ## Frontend
 
-- React
+- React 19
 - TypeScript
 - Vite
 - Tailwind CSS
@@ -143,9 +88,9 @@ src
 ├── assets
 │
 ├── components
+│   ├── Navbar
 │   ├── Footer
 │   ├── Loading
-│   ├── Navbar
 │   ├── ProtectedRoute
 │   └── GuestRoute
 │
@@ -168,3 +113,84 @@ src
 │
 ├── App.tsx
 └── main.tsx
+```
+
+---
+
+# ⚙ Installation
+
+Clone repository
+
+```bash
+git clone https://github.com/hfirza04-crypto/travel-article-app.git
+```
+
+Masuk ke folder project
+
+```bash
+cd travel-article-app
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Menjalankan project
+
+```bash
+npm run dev
+```
+
+Build production
+
+```bash
+npm run build
+```
+
+Preview production
+
+```bash
+npm run preview
+```
+
+---
+
+# 🌐 Deployment
+
+Frontend
+
+- Vercel
+
+Backend
+
+- Strapi CMS
+
+---
+
+# 👨‍💻 Author
+
+**Habib Firza**
+
+D4 Telecommunication Engineering
+
+Politeknik Negeri Padang
+
+GitHub Profile
+
+https://github.com/hfirza04-crypto
+
+Repository
+
+https://github.com/hfirza04-crypto/travel-article-app
+
+Live Demo
+
+https://travel-article-app-nu.vercel.app
+
+---
+
+# ⭐ Project Status
+
+✅ Completed
